@@ -1,0 +1,35 @@
+---
+title: "Leaflet Map"
+author: "Laurens de Wit"
+date: "21 March 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Leaflet Map
+Create a leaflet map object.
+```{r}
+library(leaflet)
+map <- leaflet() %>% addTiles()
+
+```
+
+Create Marker
+```{r}
+WhiteHouse <- makeIcon(
+   iconUrl = "http://www.whitehouse.gov/",
+   iconWidth = 32*350/225, iconHeight = 25,
+   iconAnchorX = 32*350/225/2, iconAnchorY = 25/2
+)
+```
+
+Add Marker
+```{r}
+WhiteHousePop <- c("<a href= 'http://www.whitehouse.gov/' >White House<br><img src='http://upload.wikimedia.org/wikipedia/commons/2/2a/White_House_%28South_Lawn%29.jpeg' width='210' height='132'  alt='White House' title='Whie House'></a>")
+map %>%
+   addTiles() %>%
+   addMarkers(lat=38.897957, lng=-77.036560, popup = WhiteHousePop)
+```
