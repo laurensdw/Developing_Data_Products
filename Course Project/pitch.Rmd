@@ -1,0 +1,46 @@
+---
+title: "Developing Data Products: Course Project"
+author: "Laurens de Wit"
+date: "26th of March 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Visualizing Violent Crimes in the US
+
+```{r pressure, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("crimes.png")
+```
+
+
+## Summary of Dataset
+
+Please see the tables below for a glimpse and summary of the dataset we are analyzing:
+
+```{r cars, echo = FALSE}
+summary(USArrests)
+head(USArrests)
+```
+
+## Shiny Dashboard
+
+With the following link you can access a dashboard that displays several statistics of the dataset:
+
+https://laurensdewit.shinyapps.io/course_project/
+
+Please follow the link and see the next slide for further details
+
+## Shiny Dashboard Details
+
+In the dashboard the following data is presented:
+
+- The amount of crimes per type on the vertical axis.
+- The state on the horizontal axis.
+- Two drop-down menus in which the use can decide what type of crime for which state the user wants to see.
+
+Thank you for viewing this presentation!
+
